@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex02</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background: #d2d2d2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        div {
+            background: #ffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.2rem;
+            width: 50%;
+            margin-bottom: 1.2rem;
+            padding: 2rem;
+            box-shadow: 5px 5px 4px lightblue;
+        }
+
+        table {
+            background: #ffff;
+            border-radius: 0.2rem;
+            width: 50%;
+            padding: 2rem;
+            border-collapse: collapse;
+            box-shadow: 5px 5px 4px lightblue;
+        }
+
+        th {
+            border-bottom: solid 2px black;
+            text-align: left;
+            padding: 1.2rem;
+        }
+
+        tr {
+            text-align: left;
+            padding: 1.2rem;
+        }
+
+        tr:not(:last-child) {
+            border-bottom: solid 0.5px grey;
+        }
+
+
+        a {
+            cursor: pointer;
+            background-color: #7495dc;
+            border-radius: 1.2rem;
+            width: 20%;
+            padding: 0.5rem;
+            margin-top: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            background-color: #4c71ad;
+            color: white;
+        }
+
+        a:focus{
+            border: 2px solid cornflowerblue;
+            color: black;
+        }
+        input {
+            width: 60%;
+            color: black;
+            margin-top: 1.2rem;
+            padding: 0.8%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Introduza o nome" id="nome">
+        <input type="text" placeholder="Introduza o apelido" id="apelido">
+        <input type="date" placeholder="Introduza o apelido" id="data-de-nascimento">
+        <a id="btn-submit">Submit</a>
+    </div>
+
+
+    <table class="table">
+        <tr class="items heading">
+            <th>Nome</th>
+            <th>Apelido</th>
+            <th>Data Nascimento</th>
+        </tr>
+    </table>
+    <script>
+        let alunos = [{
+            nome: "Maria",
+            apelido: "Andrade",
+            data_nascimento: 1990
+        },
+            {
+                nome: "João",
+                apelido: "Torres",
+                data_nascimento: 1988
+            },
+            {
+                nome: "Sofia",
+                apelido: "Malhoa",
+                data_nascimento: 1995
+            }
+        ]
+        let table = $(".table");
+        let item = $(".item");
+        let nome = $("#nome");
+        let apelido = $("#apelido");
+        let dt_nascimento = $("#data-de-nascimento");
+        let btn_submit = $("#btn-submit")
+        alunos_2 = alunos.map((aluno)=>{
+            if (aluno.idade>10){
+                return aluno.apelido
+            }
+        })
+        console.log(alunos_2)
+
+        function add_alunos(aluno) {
+            table.append(`
+    <tr class="items">
+    <td>${aluno.nome}</td>
+    <td>${aluno.apelido}</td>
+    <td>${aluno.data_nascimento}</td>
+    </tr>`)
+        }
+
+        alunos.forEach(add_alunos)
+
+
+        btn_submit.on("click", function () {
+            let ano_nascimento = dt_nascimento.val().split('-')[0]
+            /*        alunos.push({
+                nome: `${nome.val()}`,
+                apelido: `${apelido.val()}`,
+                data_nascimento: `${ano_nascimento}`
+            })*/
+            add_alunos({
+                nome: `${nome.val()}`,
+                apelido: `${apelido.val()}`,
+                data_nascimento: `${ano_nascimento}`
+            })
+            nome.val("")
+            apelido.val("")
+            dt_nascimento.val("")
+        })
+
+    </script>
+</body>
+</html>

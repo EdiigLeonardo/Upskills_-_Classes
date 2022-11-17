@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Alunos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container, #alunos{
+            display: flex;
+            flex-direction: column;
+            background: #fff7be;
+            margin: 1rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+            width: 100%;
+            padding: 1.8rem;
+            box-shadow: 5px 8px 10px black;
+        }
+        input{
+            padding: 1rem;
+            margin: 1rem;
+            width: 100%;
+            border-radius: 1rem;
+        }
+
+        a{
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            color: black;
+            background: coral;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="name" placeholder="introduza o nome" id="name">
+        <input type="name" placeholder="introduza o apelido" id="apelido">
+        <input type="date" placeholder="introduza a data" id="date">
+        <a id="btn">submit</a>
+    </div>
+    <div id="alunos">
+    </div>
+    <script>
+        let lista_alunos = [{
+            nome: "Pedro",
+            apelido: "Souza",
+            idade: 18
+        },{
+            nome: "Joana",
+            apelido: "Oliveira",
+            idade: 24
+        },{
+            nome: "Tiago",
+            apelido: "Malhoa",
+            idade: 60
+        }]
+        let alunos = $("#alunos");
+        lista_alunos.forEach((aluno)=>{
+            alunos.append(`
+            <h2>
+            O aluno ${aluno.nome} ${aluno.apelido} com ${aluno.idade} anos chegou!!!
+            </h2>`)
+        })
+        let btn = $("#btn");
+        btn.on("click",function (){
+            alunos.append(`
+            <h2>
+            O aluno ${$("#name").val()} ${$("#apelido").val()} chegou!!!
+            </h2>`)
+        })
+    </script>
+</body>
+</html>

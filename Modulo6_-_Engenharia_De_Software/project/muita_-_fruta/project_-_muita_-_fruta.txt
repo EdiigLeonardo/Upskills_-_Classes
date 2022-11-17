@@ -1,0 +1,70 @@
+﻿
+● Onde é que o sistema vai ser usado?
+
+O sistema vai ser utilizado tanto pelo cliente/produtor como pela 
+organização de modo a permitir conectar as duas partes.
+
+● Como é que o sistema vai realizar o objetivo especificado?
+
+- O sistema deve cadastrar clientes/produtores
+- O sitema deve permitir um login do tipo admnistrador que permita aceder às listas 
+de clientes por delegação e registar as recolhas. 
+- Registe delegações
+- Regista recolhas
+- Os sistema deve passar o estado do cliente de "Activo" para "Inactivo" 
+quando não são efectuadas mais de duas recolhas (mudança de estado)
+- O cliente pode consultar seus dados no sistema e fazer alterações relativas 
+à delegação ou tamanho da cesta;
+
+● Testagem
+
+Serão utilizados os testes Black-Box uma vez que a complexidade do sistema não 
+requer uma revisão do código muito intensiva. Por ser uma organização sem fins lucrativos esta
+hipótese também apresenta um custo mais reduzido.
+
+As primeiras funcionalidades a serem testadas serão a inscrição de clientes e produtores que 
+devem resultar em novas entradas na base de dados correspondentes ao tipo de inscrição.
+
+Deve ser testada a inserção de delegações por parte do admnistrador, e a respectiva entrada 
+de informação na base de dados.
+
+Testar o registo de recolhas e a actualização do Estado de Activo para Inactiva quando as 
+não recolhas > 2, passara no teste caso para o nº de não recolhas superior a 2 corresponder a um cliente não activo.
+
+Deve-se fazer também um teste de funcionalidade para as recolhas, passará no teste caso a recolha para um dado cliente 
+corresponda efectivamente a delegação e ao horário marcado.
+
+
+
+● Quais são os parâmetros críticos a ter em conta?
+
+- Protecção de dados (nr telfone, email, codigo postal, nif);
+
+● Que componentes do objetivo final se podem subdividir?
+
+- Sprint 1 - Desenvolver página inicial que ilustre os requisitos 
+estécticos e funcionais do cliente (landing page global).
+- Sprint 2 - Criação da base de dados, API e de uma página com formulário de registro.
+- Sprint 3 - Criação de página de autenticação que permita o login dos usuários (produtor, cliente)
+ e dos administradores;
+- Sprint 4 - Criação de uma pagina onde pode ser consultada os dados do utilizador v. cliente 
+(dados pessoais, próxima recolha e onde será, e quanto foi )
+- Sprint 5 - Criação de uma pagina onde pode ser consultada os dados de vários (dados pessoais, localidades onde actua, produto etc.)
+- Sprint 6 - Criação de uma página onde conste um mapa com todas as delegações disponiveis por localidade;
+- Sprint 7 - Crianção de uma página onde estejam todos os apoiadores e patrocinadores
+- Sprint 8 - Criação de uma página "Sobre Nós" onde constem todos os dados dos fundadores do projecto;
+- Sprint 9 - Criação de uma página de "VideoTeca" onde constem varios vídeos;
+
+● Durante quanto tempo vai ser usado o sistema?
+- A aplicação deve ter uma longividade alta para albergar as necessidades do programa Muita_Fruta.
+
+● Em que ambientes deverá funcionar?
+- Pretendemos desenvolver uma aplicação que rode em IOS/Android, assim como uma página WEB. 
+Não achamos que seja necessário desenvolver uma aplicação desktop
+porque achamos que os nossos clientes não irão utiliza-la.
+
+● Qual metodologia iremos utilizar?
+- Será utilizada a metodologia SCRUM por permitir mostrar resultados ao cliente com mais frequência e 
+fazer as alterações necessárias ao longo do projecto consoante os requisitos do cliente.
+
+

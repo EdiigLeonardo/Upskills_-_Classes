@@ -1,0 +1,221 @@
+####Populate inscrição
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (1,"2020-12-10","produtor");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (2,"2020-02-12","cliente");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (3,"2020-12-10","produtor");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (4,"2020-04-02","cliente");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (5,"2020-12-10","produtor");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (6,"2020-04-02","cliente");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (7,"2019-12-10","produtor");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (8,"2014-02-12","cliente");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (9,"2015-12-10","produtor");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (10,"2016-04-02","cliente");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (11,"2018-12-10","cliente");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (12,"2005-04-02","cliente");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (13,"2020-12-10","cliente");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (14,"2020-02-12","cliente");
+
+INSERT INTO inscrição (id_inscrição, Data_de_inscrição, Tipo)
+VALUES (15,"2020-12-10","cliente");
+
+
+
+################ Delegação
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (1,"Junta de Freguesia de Ajuda","Calçada Ajuda n° 236", "17h às 20h");
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (2,"Junta de Freguesia do Beato","Rua de Xabregas nº 67", "18h às 21h");
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (3,"Junta de Freguesia de Benfica ","Avenida Gomes Pereira nº 17", "14h às 20h");
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (4,"Junta de Freguesia de Campolide","Rua de Campolide nº 24-B", "16h às 20h");
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (5,"Junta de Freguesia de Marvila","Av. João Paulo II Lote 526 - 1ºA", "17h às 20h");
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (6,"Junta de Freguesia de Carnide","Largo das Pimenteiras nº 6", "17h às 20h");
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (7,"Junta de Freguesia de Alcantara","Rua dos Lusíadas nº 13", "17h às 20h");
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (8,"Junta de Freguesia de Lumiar","Estrada da Torre nº 19", "17h às 20h");
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (9,"Junta de Freguesia de Arroios","Calçada Ajuda n° 236", "17h às 20h");
+
+INSERT INTO delegação (id_delegação, Nome, Morada, horario_de_funcionamento)
+VALUES (10,"Junta de Freguesia de São Vicente","Calçada Ajuda n° 236", "17h às 20h");
+
+############# Populate Cliente
+ 
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+VALUES (1, "João Pereira", "Lisboa", "918756443", "jpereira@gmail.com", "854756952", "1200-345", "Grande", "Activo", 2, 1)
+
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+VALUES (2, "Ana Machado", "Lisboa", "964666441", "amcs@gmail.com", "235356409", "1100-140", "Pequena", "Inactivo", 4, 2)
+
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+VALUES (3, "João Reis", "Lisboa", "913450088", "jreis@hotmail.com", "263138437", "1000-355", "Grande", "Activo", 6, 2)
+
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+VALUES (4, "Maria Loureiro", "Lisboa", "934079098", "mmmml@gmail.com", "289059631", "1150-200", "Grande", "Activo", 8, 4)
+
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+VALUES (5, "Maria Costa", "Lisboa", "918347766", "costamaria@gmail.com", "234261412", "1170-120", "Pequena", "Activo", 10, 5)
+
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+VALUES (6, "Filipa Gomes", "Lisboa", "934528866", "gomes_fil@outlook.com", "279548532", "1150-235", "Pequena", "Activo", 12, 6)
+
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+VALUES (7, "Ricardo Antunes", "Lisboa", "961238854", "ricant@gmail.com", "290368316", "1200-127", "Pequena", "Activo", 14, 7)
+
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+VALUES (8, "Lourenço Pereira", "Lisboa", "916541822", "lourencoper@gmail.com", "298812347", "1000-300", "Grande", "Activo", 16, 8)
+
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+~VALUES (9, "Rita Santos", "Lisboa", "936579823", "rita_sant@gmail.com", "233240772", "1200-100", "Grande", "Activo", 18, 9)
+
+INSERT INTO cliente (id_cliente, Nome, Cidade, Telefone, Email, Nif, Codigo_Postal, TipoDeCesta, Estado, id_inscrição, id_Delegação) 
+VALUES (10, "João Rodrigues", "Lisboa", "913256443", "rodri.jo@gmail.com", "269711597", "1140-155", "Pequena", "Activo", 20, 10)
+
+
+
+################# Populate Produtor
+
+
+INSERT INTO produtor (id_Produtor, Nome, Localidade, produto, Nif, id_inscrição)
+VALUES (1,"TuttiFruitty","Lisboa", "Fruta","21548852",1);
+
+INSERT INTO produtor (id_Produtor, Nome, Localidade, produto, Nif, id_inscrição)
+VALUES (2,"LM","Loures","Legumes","21548342",3);
+
+
+INSERT INTO produtor (id_Produtor, Nome, Localidade, produto, Nif, id_inscrição)
+VALUES (3,"Sousa Ribeiro","Porto","Legumes","21453821",5);
+
+
+INSERT INTO produtor (id_Produtor, Nome, Localidade, produto, Nif, id_inscrição)
+VALUES (4,"Verdes campos","Lourinhã", "Fruta","204096677",7);
+
+
+INSERT INTO produtor (id_Produtor, Nome, Localidade, produto, Nif, id_inscrição)
+VALUES (5,"Fresco Pomar","Seixal","Legumes","299091317",9);
+
+############Populate Recolha
+
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (1,"2021-12-15",1,1,1);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (2,"2022-01-06",1,1,1);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (3,"2022-01-07",0,2,2);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (4,"2022-02-15",0,2,2);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (5,"2022-04-15",1,1,3);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (6,"2022-05-15",1,1,3);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (7,"2022-05-15",1,2,4);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (8,"2022-05-21",1,2,4);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (9,"2022-06-01",1,3,5);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (10,"2022-06-11",1,3,5);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (11,"2022-06-11",1,4,6);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (12,"2022-06-18",1,4,6);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (13,"2022-06-18",1,2,7);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (14,"2022-07-21",1,2,7);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (15,"2022-08-11",1,3,8);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (16,"2022-08-18",1,3,8);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (17,"2022-09-01",1,5,9);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (18,"2022-09-17",1,5,9);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (19,"2022-09-17",1,7,10);
+
+INSERT INTO recolha (id_Recolha, data_de_recolha, Recolhido, id_Delegação, id_cliente) 
+VALUES (20,"2022-09-25",1,7,10);
+
+
+############# Populate delegação_Produtor
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (1, 2);
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (2, 1);
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (3, 3);
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (4, 4);
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (5, 5);
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (6, 1);
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (7, 2);
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (8, 3);
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (9, 4);
+
+INSERT INTO delegação_produtor (id_Delegação, id_Produtor) VALUES (10, 5)

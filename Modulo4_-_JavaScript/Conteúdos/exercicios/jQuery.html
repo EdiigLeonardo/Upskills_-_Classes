@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQUERY</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="menu">
+      <a href="fotografia.html">
+        <img src="..."/>Fotografias
+      </a>
+      <a href="videos.html">
+        <img src="..."/>Videos
+      </a>
+      <a href="musicas.html">
+        <img src="..."/>Musica
+      </a>
+        <div class="caixas">
+            <div class="caixa1">Caixa 1</div>
+            <div class="caixa2">Caixa 2</div>
+        </div>
+        <script>
+            let menu = $("#menu");
+            let primeiro = menu.find("a").eq(0);
+            let segundo = menu.find("a").eq(1);
+            // Adiciona classe
+            console.log(primeiro.hasClass("selecionado"))
+            primeiro.addClass("selecionado");
+            console.log(primeiro)
+            console.log(primeiro.hasClass("selecionado"))
+            // Para ver se o elemento tem uma class
+            // console.log(primeiro.hasClass("selecionado"));
+            // Remove classe
+            // primeiro.removeClass("selecionado");
+            // Esconde elemento
+            segundo.hide();
+            // Mostra elemento
+            segundo.show();
+
+        </script>
+    </div>
+</body>
+</html>

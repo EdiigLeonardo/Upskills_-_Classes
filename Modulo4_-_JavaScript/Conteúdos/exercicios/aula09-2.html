@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h1 id="titulo" style="cursor:pointer;font-size:10px;">Sou o maior</h1>
+    <button id="btn-click" type="button">show</button>
+    <button id="btn-hide" type="button">Reset</button>
+    <script>
+      let titulo = $("#titulo");
+      let btnShow = $("#btn-click")
+      let btnHide = $("#btn-hide")
+      let tamanhoDeLetra = "14px";
+      let body =  $("body")
+      function aumentaEstilo(){
+
+          let green = Math.floor(Math.random() * 256)
+          let red =  Math.floor(Math.random() * 256)
+          let blue =  Math.floor(Math.random() * 256)
+
+          tamanhoDeLetra = parseInt(tamanhoDeLetra) + 2 + 'px'
+
+          titulo.css("font-size",tamanhoDeLetra);
+          titulo.css("color",`rgb(${red},${green},${blue})`);
+          body.css("background", `rgb(${green},${blue},${red})`)
+
+          return ''}
+
+      btnHide.mouseover(() => {
+          nMudanças = 0;
+          tamanhoDeLetra = "14px";
+          titulo.html('Sou o maior');
+          titulo.css({
+              fontSize: tamanhoDeLetra,
+              color: "black"
+          })
+          body.css({
+              background: 'white'
+          });
+      });
+
+      btnShow.mouseover(()=>aumentaEstilo());
+
+    </script>
+</body>
+</html>

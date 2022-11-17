@@ -1,0 +1,34 @@
+#gameLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+
+.item {
+    width: max-content;
+    margin: 0 auto;
+}
+
+button {
+    width: 500px;
+    height: 60px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    border-color: lightgrey;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #dcdcdc;
+    color: #666966;
+}
+
+.historico {
+    width: max-content;
+    margin: 0 auto;
+    padding: 100px;
+    color: #666966;
+    font-family: Arial sans-serif;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1</title>
+
+</head>
+<body>
+    <h1 id="titulo" style="cursor:pointer;font-size:10px;">Sou o maior</h1>
+    <button id="btn-click" type="button">show</button>
+    <button id="btn-hide" type="button">Reset</button>
+    <script>
+      let titulo = document.getElementById("titulo")
+      let btnShow = document.getElementById("btn-click")
+      let btnHide = document.getElementById("btn-hide")
+      let tamanhoDeLetra = "14px";
+      let nMudanças = 0;
+      let body = document.body
+      function aumentaEstilo(){
+          let green = Math.floor(Math.random() * 256)
+          let red =  Math.floor(Math.random() * 256)
+          let blue =  Math.floor(Math.random() * 256)
+          nMudanças += 1;
+          tamanhoDeLetra = parseInt(tamanhoDeLetra) + 2 + 'px'
+          titulo.style.fontSize = tamanhoDeLetra;
+          titulo.innerHTML = `Eu mudei ${nMudanças} vezes`
+          titulo.style.color = `rgb(${red},${green},${blue})`
+          body.style.background = `rgb(${green},${blue},${red})`
+          return ''
+      }
+      btnShow.onmouseover = () => aumentaEstilo()
+      btnHide.onmouseover = () => {
+          nMudanças = 0;
+          tamanhoDeLetra = "14px";
+          titulo.innerHTML = 'Sou o maior'
+          titulo.style.fontSize = tamanhoDeLetra;
+          titulo.style.color = "black"
+          body.style.background = 'white';
+      }
+      btnShow.onfocus = () =>{
+          btnShow.style.color = "grey";
+          btnShow.style.border= "2px solid lightblue"
+      }
+    </script>
+</body>
+</html>

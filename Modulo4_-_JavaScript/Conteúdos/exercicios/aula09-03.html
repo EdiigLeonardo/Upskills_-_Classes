@@ -1,0 +1,76 @@
+<!--
+Pretende-se criar um formulário que receba o
+nome e a data de nascimento da pessoa e
+coloque uma mensagem com o nome e idade
+por baixo (calculada pelo ano), num h2
+
+Nome Maria Jasimento, 25 anos
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Html</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            background: #ece9e9;
+            width: 100%;
+        }
+        .form-group{
+            padding: 5%;
+            width: 30%;
+            height: 50%;
+            margin: auto;
+            box-shadow: 2px 2px darkgrey;
+            background: #ffff;
+            border-radius: 1rem;
+            margin-top: 10%;
+        }
+        .form-group, .form-group form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .name-input, .date-input{
+            margin: 1rem;
+            width: 80%;
+            border-radius: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="form-group">
+            <form method="#">
+                <input type="text" name="name" placeholder="Nome" class="name-input">
+                <input  type="date" name="date" placeholder="Data de Nascimento" class="date-input">
+            </form>
+<!--            <a id="btn" style="cursor:pointer">Obter Nome</a>-->
+            <h2 class="escreva-algo"></h2>
+        </div>
+    </div>
+
+
+    <script>
+        let name_form = $(".name-input");
+        let date_form = $(".date-input");
+        let button = $("#btn");
+
+        function handleChange(){
+            let name_val = name_form.val()
+            let date_val = date_form.val()
+            let age = 2022 - parseInt(date_val.split('-')[0])
+            console.log(name_val,age)
+            $(".escreva-algo").html(`Nome ${name_val}, ${age} anos`);
+            return ''
+        }
+
+        name_form.on("input", handleChange);
+        date_form.on("change", handleChange);
+
+    </script>
+</body>
+</html>

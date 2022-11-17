@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Viagem</h1>
+    <div>
+      <a href="https://otripulante.com/blog/5-dicas-para-melhorar-suas-fotos-de-viagem"
+         style="cursor:pointer; text-decoration: none; color:black" target="_blank" id="a_href">
+        <img src="images.jpg" width="50%" id="img-viagem"/>
+      </a>
+    </div>
+
+    <a href="https://otripulante.com/blog/5-dicas-para-melhorar-suas-fotos-de-viagem"
+       style="cursor:pointer; text-decoration: none; color:black" target="_blank">
+      Pesquise aqui
+    </a>
+
+    <script>
+      let img_btn = document.getElementById("img-viagem");
+      let a_href = document.getElementById("a_href");
+      let handleClick = ()=>{
+        console.log('Img Clicked')
+        return  ' '
+      }
+      img_btn.style.cursor = "pointer"
+      img_btn.onclick = handleClick()
+
+      let c1 = $(".caixa1");
+      let c2 = $(".caixa2");
+      c1.click(function(){
+          c2.toggleClass("azul");
+      })
+      c2.mouseenter(function(){
+          c1.addClass("rosa");
+      })
+      c2.mouseleave(function(){
+          c1.removeClass("rosa");
+      })
+
+    </script>
+</body>
+</html>

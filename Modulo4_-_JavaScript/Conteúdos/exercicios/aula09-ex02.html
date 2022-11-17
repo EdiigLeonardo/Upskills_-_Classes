@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .item {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+</head>
+<body>
+
+    <div class="lista_alunos">
+      <div class="item">
+        <p>Nome  Sobrenome</p>
+        <p>idade</p>
+      </div>
+    </div>
+    <script>
+      let alunos = [
+        {
+          nome: "Teresa",
+          apelido: "Andrade",
+          idade: 28
+        }, {
+          nome: "Maria",
+          apelido: "Ventura",
+          idade: 23
+        }, {
+          nome: "João",
+          apelido: "Pereira",
+          idade: 25
+        },
+      ];
+      let listaAlunos = $(".lista_alunos");
+      let item = $(".lista_alunos>.item");
+      alunos.forEach((aluno)=>{
+        listaAlunos.append(`
+        <div class="item">
+        <p>${aluno.nome}  ${aluno.apelido}</p>
+        <p>${aluno.idade}</p>\n`)
+      })
+    </script>
+</body>
+</html>

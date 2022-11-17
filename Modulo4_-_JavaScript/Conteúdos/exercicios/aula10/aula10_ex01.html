@@ -1,0 +1,60 @@
+<!--
+Pretende-se criar um formulário que receba o
+nome e a data de nascimento da pessoa e
+coloque uma mensagem com o nome e idade
+por baixo (calculada pelo ano), num h2
+
+Nome Maria Jasimento, 25 anos
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Html</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn{
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="form-group">
+        <form method="#">
+            <input type="text" name="name" placeholder="Nome" class="name-input">
+            <input  type="date" name="date" placeholder="Data de Nascimento" class="date-input">
+        </form>
+        <h2 class="escreva-algo"></h2>
+    </div>
+</div>
+
+
+<script>
+    let name_form = $(".name-input");
+    let date_form = $(".date-input");
+    let button = $("#btn");
+    let name_val = name_form.on("input",
+        function(){
+            return name_form.val()
+        }
+    )
+    let age = date_form.on("input",function (){
+        let date_val = date_form.val()
+        let age = 2022 - parseInt(date_val.split('-')[0])
+    })
+    $(".escreva-algo").html(`Nome ${name_val}, ${age} anos`);
+
+</script>
+</body>
+</html>
